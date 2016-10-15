@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Hex Grid</title>
+
+   <style>
+
+
+   .hexagon {
+     position: relative;
+     width: 300px;
+     height: 173.21px;
+     background-color: #64C7CC;
+     margin: 0 0 86.60px 0;
+     float: left;
+
+   }
+
+   .hexagon .pre,
+   .hexagon .post {
+
+     content: "";
+     position: absolute;
+     width: 0;
+     border-left: 150px solid #fff;
+     border-right: 150px solid #fff;
+   }
+
+   .hexagon .contents{
+     top: 0;
+      left: 0;
+
+      position: absolute;
+   }
+
+   .hexagon .middle {
+
+     height: 173.20px;
+   }
+
+   .hexagon .pre {
+     bottom: 100%;
+     border-bottom: 86.60px solid #fff;
+   }
+
+   .hexagon .post {
+     top: 100%;
+     width: 0;
+     border-top: 86.60px solid #fff;
+   }
+
+   .hexagon-row {
+      clear: left;
+   }
+
+   .hexagon-row {
+      margin-left: 150px;
+      margin-bottom: 100px;
+   }
+
+   .hexagon-row.even {
+      margin-left: 0;
+   }
+
+   .hex-grid * {
+      position: relative;;
+   }
+
+   </style>
+
+
+</head>
+<body>
+
+<h1>Hex Grid</h1>
+
+<div id="hex-test">
+   <!-- <div class="hexagon-row even">
+      <div class="hexagon"></div>
+      <div class="hexagon"></div>
+      <div class="hexagon"></div>
+      <div class="hexagon"></div>
+   </div>
+   <div class="hexagon-row">
+      <div class="hexagon"></div>
+      <div class="hexagon"></div>
+      <div class="hexagon"></div>
+   </div>
+   <div class="hexagon-row even">
+      <div class="hexagon"></div>
+      <div class="hexagon"></div>
+      <div class="hexagon"></div>
+      <div class="hexagon"></div>
+   </div> -->
+
+</div>
+   <div class="hex-grid">
+      <div>Hexagon Content 1</div>
+      <div>Hexagon Content 2</div>
+      <div>Hexagon Content 3</div>
+      <div>Hexagon Content 4</div>
+      <div>Hexagon Content 5</div>
+      <div>Hexagon Content 6</div>
+      <div>Hexagon Content 7</div>
+      <div>Hexagon Content 8</div>
+      <div>Hexagon Content 9</div>
+      <div>Hexagon Content 10</div>
+      <div>Hexagon Content 11</div>
+      <div>Hexagon Content 12</div>
+      <div>Hexagon Content 13</div>
+      <div>Hexagon Content 14</div>
+      <div>Hexagon Content 15</div>
+      <div>Hexagon Content 16</div>
+      <div>Hexagon Content 17</div>
+      <div>Hexagon Content 18</div>
+      <div>Hexagon Content 19</div>
+      <div>Hexagon Content 20</div>
+      <div>Hexagon Content 21</div>
+      <div>Hexagon Content 22</div>
+      <div>Hexagon Content 23</div>
+      <div>Hexagon Content 24</div>
+      <div>Hexagon Content 25</div>
+      <div>Hexagon Content 26</div>
+      <div>Hexagon Content 27</div>
+      <div>Hexagon Content 28</div>
+      <div>Hexagon Content 29</div>
+      <div>Hexagon Content 30</div>
+   </div>
+
+</body>
+
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../src/js/hexgrid.js"></script>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "hexgrid.js",
+  "authors": [
+    "furenku <furenku@gmail.com>"
+  ],
+  "description": "a responsive hexagonal grid generator",
+  "main": "src/js/hexgrid.js",
+  "moduleType": [],
+  "keywords": [
+    "grid",
+    "hexagonal",
+    "jquery",
+    "plugin"
+  ],
+  "license": "MIT",
+  "homepage": "http://github.com/kernspaltung/hexgrid.js",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
