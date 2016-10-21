@@ -68,8 +68,8 @@ function HexGrid() {
       {
          breakpoint: 1600,
          settings: {
-            maxRowItems: 8,
-            spacing: 25
+            maxRowItems: 10,
+            spacing: 35
          }
       }
    ];
@@ -155,7 +155,7 @@ function HexGrid() {
       newRow.addClass('hexagon-row');
 
       if( ( $('.hex-grid').find('.hexagon-row').length % 2 ) == 0 )
-         newRow.addClass('even');
+      newRow.addClass('even');
 
       $('.hex-grid').append( newRow );
 
@@ -171,12 +171,14 @@ function HexGrid() {
       var numAdded = 0;
       var lastRow = hexgrid.addNewRow();
 
+
+      if( ! lastRow.hasClass('even') ) lastRow.css({marginLeft:breakpoint.settings+lastRow.css('marginLeft')})
       for ( var i = 0; i < hexgrid.contents.length; i++ ) {
 
          if( numAdded >= settings.maxRowItems  - ( 1 - $('.hex-grid').find('.hexagon-row').length % 2 ) ) {
 
             lastRow = hexgrid.addNewRow();
-               numAdded=0;
+            numAdded=0;
 
          }
 
@@ -195,6 +197,11 @@ function HexGrid() {
          var hexW = maxW - ( settings.spacing * 2 );
 
          hex.width( hexW ).height( hexW );
+         hex.css({
+            marginTop: settings.spacing / 2,
+            marginLeft: settings.spacing / 2,
+            // marginRight: settings.spacing / 2
+         });
 
 
          hex.css({
@@ -226,8 +233,8 @@ function HexGrid() {
          border-right: 150px solid transparent;
          border-bottom: 86.60px solid #64C7CC;
          border-top: 86.60px solid #64C7CC;
-          margin-left: 150px;
-          margin-bottom: 100px;
+         margin-left: 150px;
+         margin-bottom: 100px;
          */
 
          hex.find('.contents').html( hexgrid.contents[i] );
@@ -243,14 +250,14 @@ function HexGrid() {
       var offsetL = ( $(window).width() - ( maxW * breakpoint.settings.maxRowItems ) );
 
       $('.hexagon-row').css({
-         marginLeft: offsetL + hexW / 2,
+         marginLeft: (offsetL + hexW / 2) + breakpoint.settings.spacing/4,
          marginBottom: hexW / 2,
       })
       $('.hexagon-row.even').css({
          marginLeft: offsetL,
       })
 
-console.log("TOdO: calcular esto bien:");
+      console.log("TOdO: calcular esto bien:");
       $('.hexagon').css({
 
          // marginTop: parseInt( (maxW / 6 ) ) * - 1
